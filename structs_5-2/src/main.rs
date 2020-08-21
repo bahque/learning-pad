@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Rectangle {
     w: u32,
     h: u32,
@@ -13,7 +14,8 @@ fn main() {
     };
 
     println!(
-        "area is {}",
+        "area of {:?} is {}",
+        &rect,
         area_s(&rect)
     )
 }
