@@ -4,6 +4,12 @@ struct Rectangle {
     h: u32,
 }
 
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.w * self.h
+    }
+}
+
 
 fn main() {
     let w1 = 30;
@@ -16,13 +22,8 @@ fn main() {
     println!(
         "area of {:?} is {}",
         &rect,
-        area_s(&rect)
+        rect.area()
     )
 }
 
-
-fn area_s(rect: &Rectangle) -> u32 {
-    //rect.w = 100;
-    rect.w * rect.h
-}
 
