@@ -1,15 +1,26 @@
+struct Rectangle {
+    w: u32,
+    h: u32,
+}
+
+
 fn main() {
     let w1 = 30;
     let h1 = 50;
-    let rect = (w1, h1);
+    let rect = Rectangle {
+        w: w1,
+        h: h1,
+    };
 
     println!(
         "area is {}",
-        area(rect)
+        area_s(&rect)
     )
 }
 
-fn area(rect: (u32, u32)) -> u32 {
-    rect.0 * rect.1
+
+fn area_s(rect: &Rectangle) -> u32 {
+    //rect.w = 100;
+    rect.w * rect.h
 }
 
