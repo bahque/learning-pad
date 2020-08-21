@@ -1,1 +1,3 @@
 # learning-pad
+
+A repository to learn about git and rust and ...
